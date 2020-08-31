@@ -72,14 +72,14 @@ class SpokenToWritten:
     #getting user input
     def get_user_input(self):
 
-        self.paragraph=input("\n[IN]:Enter Your paragraph of spoken english:\n\t")
+        self.paragraph=input("\n[INPUT]:Enter Your paragraph of spoken english:\n\t")
 
         if not self.paragraph:
             raise ValueError("[Error]: You entered nothing.")
 
     #getting  user output
     def show_output(self):
-        print("\n[OUT]:The input Spoken English Paragraph: \n\n \" "+ self.paragraph+"\"")
+        print("\n[OUTPUT]:The input Spoken English Paragraph: \n\n \" "+ self.paragraph+"\"")
         print("\nConverted Written English Paragraph: \n\n \"" +self.ouptut_para+"\"")
 
     
@@ -123,12 +123,9 @@ class SpokenToWritten:
 
 
 def convert_sp_to_wr():
-    #creating class object
     obj_spoken=SpokenToWritten()
     obj_spoken.get_user_input()
     obj_spoken.Convert()
-
-
     obj_spoken.show_output()
 
 from convert import convert_sp_to_wr
